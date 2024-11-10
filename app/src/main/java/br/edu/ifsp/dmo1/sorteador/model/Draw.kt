@@ -17,13 +17,13 @@ class Draw(private val border: Int = 0) {
         var number: Int
         do {
             number = strategy.nextNumber()
-        } while (history.contains(number)) // Garantindo que o número não seja repetido
+        } while (history.contains(number))
 
-        history.add(number) // Agora estamos usando o ArrayList para armazenar e manter a ordem
+        history.add(number)
         return number
     }
 
-    fun getHistory() = ArrayList(history) // Retorna os números sorteados na ordem em que foram sorteados
+    fun getHistory() = ArrayList(history)
     fun getLowBorder() = strategy.getLowBorder()
     fun getHighBorder() = strategy.getHighBorder()
 }
